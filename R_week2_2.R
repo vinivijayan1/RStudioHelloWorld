@@ -10,6 +10,7 @@ z
 
 min(x)
 max(x)
+range(x)
 length(x)
 sum(x)
 prod(x)
@@ -25,22 +26,25 @@ sorted_z <- sort(z)
 sorted_z
 typeof(sorted_z)
 
+sorted_z1 <- sort(z, decreasing = TRUE)
+sorted_z1
 #sequence function
+1:30
+2*1:15
+30:1
 seq(1,30)
-seq(1:30)
-x <- c(1:30)
-x
 
-seq(2,30,2)
+
+seq(from=2,to=30,by=2)
 seq(2,by=3,length = 10)
 
 seq(-5, 5, by=.2) -> s3
 s3
 
-s4 <- seq(from=0, by=2,length=50)
+s4 <- seq(from=0, by=2,length.out=50)
 s4
 
-s5 <- seq(1, 10, length.out = 11)
+s5 <- seq(from=1, to=10, length = 11)
 print(s5)
 
 seq3 <- seq(from=-100,to=100, by=.6)
@@ -77,15 +81,33 @@ z <- c(1:3,NA)
 is.na(z)
 x == NA
 x
+
+m<-x == NA
+m
+
+is.nan(m)
+is.na(m)
+
 xx <-0/0
 is.na(xx)
 is.nan(xx)
-xx1 <- 0/0-0/0
+
+xx1 <- Inf -Inf
 is.na(xx)
 is.nan(xx)
 
+str1 <- c("a", "b","c")
+str1
+
+str2 <- c("my name is \"vini\"")
+str2
+
+n<- 1:100
+n
+
 y <- x[!is.na(x)]
 y
+x
 (x+1)[(!is.na(x)) & x>0] -> z1
 z1
 
@@ -109,7 +131,8 @@ vec2
 vec3 <- vec2 [c(1,3,6)]
 vec3
 vec3_factor <- as.factor(vec3)
-class(vec3)
+class(vec3_factor)
+levels(vec3_factor)
 
 factor (x=c("Degree", "High School", "Masters", "Doctorate"),
         levels = c("High School", "Degree", "Masters", "Doctorate"), ordered = TRUE)

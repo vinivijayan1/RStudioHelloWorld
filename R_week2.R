@@ -1,3 +1,5 @@
+x<-2
+x
 a <- b <- 7
 a
 b
@@ -5,6 +7,10 @@ rm(a)
 a
 x <- 5
 class (x)
+is.numeric(x)
+is.integer(x)
+
+y <- 5.0
 is.numeric(x)
 is.integer(x)
 
@@ -22,9 +28,9 @@ class(5L/3L)
 x <- "data" #x: It is the vector that needs to be converted into a factor.
 #Levels: It is a set of distinct values which are given to the input vector x.
 x
-y <- factor("data",levels = c('data','data1'))
+y <- factor('data',levels = c('data','data1'))
 y
-gender<- factor('male', levels = c('male', 'female'))
+gender <- factor('male', levels = c('male', 'female'))
 gender
 
 #character
@@ -33,6 +39,7 @@ x
 
 nchar(x)
 nchar(333)
+nchar(y)
 
 
 
@@ -74,6 +81,7 @@ is.logical(k)
 
 
 ##Vector
+c(10, 150, 30, 45, 20.3)
 assign('a', c(10, 150, 30, 45, 20.3))
 a
 class (a)
@@ -98,3 +106,4 @@ x1
 p <- c (1, 2, 4, 7)
 q <- c (5, 5, 5)
 p+q
+
